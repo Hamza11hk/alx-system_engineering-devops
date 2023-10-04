@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+apt-get -y update
+apt-get -y install nginx
+sed -i 's/default_server;/;/g' /etc/nginx/sites-available/default
+service nginx start
